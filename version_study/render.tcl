@@ -572,10 +572,10 @@ label textsize 1.0
 pbc unwrap -sel all
 
 # Loop over system and dump fames
-for {set i 0} {$i < $num} {incr i} {
+for {set i 0} {$i < 60001} {incr i} {
   animate goto $i
   display update
-  render TachyonInternal [format snapshot.%06d.rgb $i]
+  render TachyonInternal [format full-snapshot.%06d.rgb $i]
 }
 
 
