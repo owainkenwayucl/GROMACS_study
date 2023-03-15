@@ -1,5 +1,8 @@
 #!/usr/bin/env gnuplot
 #myriad_2018.2_msd_by_2023.ssv  ver_study_myriad_2018.ssv
+
+set datafile commentschars "#@&"
+
 set term png
 set output "msd.png"
 

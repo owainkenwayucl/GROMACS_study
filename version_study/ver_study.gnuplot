@@ -1,5 +1,7 @@
 #!/usr/bin/env gnuplot
 
+set datafile commentschars "#@&"
+
 set term png
 set output "ver_study.png"
 
