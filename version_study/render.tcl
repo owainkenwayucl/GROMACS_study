@@ -569,7 +569,7 @@ vmdrestoremycolors
 label textsize 1.0
 
 # Hopefully fix box issues.
-pbc unwrap -sel all
+# pbc unwrap -sel all #lol no this makes things much worse.
 
 # Loop over system and dump fames
 for {set i 0} {$i < 60001} {incr i} {
