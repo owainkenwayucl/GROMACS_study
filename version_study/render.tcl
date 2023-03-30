@@ -570,7 +570,7 @@ label textsize 1.0
 
 # Hopefully fix box issues.
 # pbc unwrap -sel all #lol no this makes things much worse.
-
+mol modstyle 0 0 DynamicBonds 1.600000 0.300000 12.000000
 # Loop over system and dump fames
 for {set i 0} {$i < 60001} {incr i} {
   animate goto $i
