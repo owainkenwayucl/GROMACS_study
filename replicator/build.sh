@@ -92,11 +92,11 @@ EOF
 
 # Scale Z direction _Z_SCALE
 echo "Scaling Z dimension by ${_Z_SCALE}x"
-${_GRO_COMMAND} editconf -f GRA_sheet.gro -scale 1 1 ${_Z_SCALE}
+${_GRO_COMMAND} editconf -f GRA_sheet.gro -scale 1 1 ${_Z_SCALE} -o GRA_sheet_Z.gro
 
 # Solvate the system. This will add water into the vacuum.
 echo "Solvating the system"
-${_GRO_COMMAND} solvate -cp GRA_sheet -o GRA_final.gro -p GRA_master.top
+${_GRO_COMMAND} solvate -cp GRA_sheet_Z.gro -o GRA_final.gro -p GRA_master.top
 
 # Generate minimisation mdp
 # This one is from a GROMACS tutorial: http://www.mdtutorials.com/gmx/lysozyme/Files/minim.mdp
