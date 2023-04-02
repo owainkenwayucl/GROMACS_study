@@ -4,7 +4,7 @@
 #$ -l mem=4G
 #$ -pe mpi 36
 #$ -cwd
-#$ -N GROMACS_version_study
+#$ -N GROMACS_replication_study
 
 #$ -t 2018-2023
 set -e
@@ -41,7 +41,7 @@ rm -rf GROMACS_study
 
 GROMACS_VER=${_GRO_MAJOR_VERSION} ./build.sh
 
-gmx_mpi grompp -f production.mdp -c min1.gro -p GRA_master.top -o production.tpr -maxwarn 2
+gmx_mpi grompp -f production.mdp -c min1.gro -p GRA_master.top -o production.tpr 
 
 mpirun -np ${NSLOTS} gmx_mpi mdrun -deffnm production -s production.tpr
 
