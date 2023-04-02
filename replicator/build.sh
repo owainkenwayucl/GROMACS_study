@@ -37,7 +37,7 @@ echo "Prepping Force Field"
 tar -xvf ${HOME}/tar/charmm36-jul2022.ff.tgz
 mv charmm36-jul2022.ff charmm36.ff
 
-cat << EOF > charm36.ff/graphene.n2t
+cat << EOF > charmm36.ff/graphene.n2t
 C    CG2R61   0.00      12.011  1    C 0.142
 C    CG2R61   0.00      12.011  2    C 0.142   C 0.142
 C    CG2R61   0.00      12.011  3    C 0.142   C 0.142   C 0.142
