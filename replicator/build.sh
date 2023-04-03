@@ -94,7 +94,7 @@ EOF
 
 # Scale Z direction _Z_SCALE
 echo "Scaling Z dimension by ${_Z_SCALE}x"
-${_GRO_COMMAND} editconf -f GRA_sheet.gro -scale 1 1 ${_Z_SCALE} -o GRA_sheet_Z.gro
+${_GRO_COMMAND} editconf -f GRA_sheet.gro -c -scale 1 1 ${_Z_SCALE} -o GRA_sheet_Z.gro
 
 # Solvate the system. This will add water into the vacuum.
 echo "Solvating the system"
