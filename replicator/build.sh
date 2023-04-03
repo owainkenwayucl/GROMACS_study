@@ -134,7 +134,6 @@ ${_GRO_COMMAND} mdrun -v -deffnm min1
 # This one is from a GROMACS tutorial: http://www.mdtutorials.com/gmx/lysozyme/Files/nvt.mdp
 echo "Generating run mdp"
 cat << EOF > production.mdp
-define                  = -DPOSRES  ; position restrain the protein
 ; Run parameters
 integrator              = md        ; leap-frog integrator
 nsteps                  = 50000     ; 2 * 50000 = 100 ps
