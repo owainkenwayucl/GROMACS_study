@@ -11,7 +11,9 @@ module load spack-test
 
 export _GRO_MAJOR_VERSION=${GROMACS_VERSION:-2018.2}
 export _GRO_COMMAND="mpirun -np 1 gmx_mpi"
-export _Z_SCALE=50
+export _Z_SCALE=25
+export _X_SCALE=150
+export _Y_SCALE=100
 
 module load spack-test
 
@@ -58,7 +60,7 @@ EOF
 
 # Create the sheet by replication
 echo "Create sheet by replication"
-${_GRO_COMMAND} genconf -f GRA_unit_cell.gro -o GRA_sheet.gro -nbox 150 100 1
+${_GRO_COMMAND} genconf -f GRA_unit_cell.gro -o GRA_sheet.gro -nbox ${_X_SCALE} ${_Y_SCALE} 1
 
 # Generate topology file
 echo "Generating topology file"
