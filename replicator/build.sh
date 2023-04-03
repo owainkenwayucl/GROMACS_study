@@ -12,8 +12,8 @@ module load spack-test
 export _GRO_MAJOR_VERSION=${GROMACS_VERSION:-2018.2}
 export _GRO_COMMAND="mpirun -np 1 gmx_mpi"
 export _Z_SCALE=10
-export _X_SCALE=15
-export _Y_SCALE=10
+export _X_SCALE=30
+export _Y_SCALE=20
 
 module load spack-test
 
@@ -109,7 +109,7 @@ cat << EOF > min.mdp
 integrator  = steep         ; Algorithm (steep = steepest descent minimization)
 emtol       = 1000.0        ; Stop minimization when the maximum force < 1000.0 kJ/mol/nm
 emstep      = 0.01          ; Minimization step size
-nsteps      = 500000        ; Maximum number of (minimization) steps to perform
+nsteps      = 50000         ; Maximum number of (minimization) steps to perform
 
 ; Parameters describing how to find the neighbors of each atom and how to calculate the interactions
 nstlist         = 1         ; Frequency to update the neighbor list and long range forces
@@ -136,7 +136,7 @@ echo "Generating run mdp"
 cat << EOF > production.mdp
 ; Run parameters
 integrator              = md        ; leap-frog integrator
-nsteps                  = 50000     ; 2 * 50000 = 100 ps
+nsteps                  = 5000000   ; 2 * 50000 = 100 ps
 dt                      = 0.002     ; 2 fs
 ; Output control
 nstxout                 = 500       ; save coordinates every 1.0 ps
