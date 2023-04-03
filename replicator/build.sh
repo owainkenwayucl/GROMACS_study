@@ -161,6 +161,7 @@ pme_order               = 4         ; cubic interpolation
 fourierspacing          = 0.16      ; grid spacing for FFT
 ; Temperature coupling is on
 tcoupl                  = V-rescale             ; modified Berendsen thermostat
+tc-grps                 = SOL     GRA
 tau_t                   = 0.1     0.1           ; time constant, in ps
 ref_t                   = 300     300           ; reference temperature, one for each group, in K
 ; Pressure coupling is off
