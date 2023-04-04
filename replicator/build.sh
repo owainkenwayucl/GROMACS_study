@@ -120,6 +120,9 @@ rcoulomb        = 1.0       ; Short-range electrostatic cut-off
 rvdw            = 1.0       ; Short-range Van der Waals cut-off
 pbc             = xyz       ; Periodic Boundary Conditions in all 3 dimensions
 periodic_molecules = yes    ; a la Graphene tutorial
+freezegrps               = GRA
+freezedim                = Y Y Y
+
 EOF
 
 # Generate minimisation tpr
@@ -174,6 +177,9 @@ gen_vel                 = yes       ; assign velocities from Maxwell distributio
 gen_temp                = 300       ; temperature for Maxwell distribution
 gen_seed                = -1        ; generate a random seed
 periodic_molecules = yes    ; a la Graphene tutorial
+
+freezegrps               = GRA
+freezedim                = Y Y Y
 EOF
 
 
