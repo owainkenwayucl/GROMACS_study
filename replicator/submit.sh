@@ -46,4 +46,4 @@ gmx_mpi grompp -f production.mdp -c min1.gro -p GRA_master.top -o production.tpr
 mpirun -np ${NSLOTS} gmx_mpi mdrun -deffnm production -s production.tpr
 
 echo 0 | gmx_mpi msd -f production.trr -s production.gro -o production_${_GRO_MAJOR_VERSION}.xvg
-
+cat production_${_GRO_MAJOR_VERSION}.xvg | sed '/^@/d' | sed '/^#/d' > production_${_GRO_MAJOR_VERSION}.dat
